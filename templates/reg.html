@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Registration Form | CodingLab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='reg.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+            <form method="POST" action="{{ url_for('views.reg') }}">
+                <div class="user-details">
+                    <div class="input-group">
+                        <div class="input-box">
+                            <span class="details">Full Name</span>
+                            <input type="text" placeholder="Enter your name" name="name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Country</span>
+                            <input type="text" placeholder="Enter your country" name="country" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Are you a Fresher or Experienced?</span>
+                            <select name="FreshExp" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Fresher">Fresher</option>
+                                <option value="Experienced">Experienced</option>
+                            </select>
+                        </div>
+                    
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <span class="details">LinkedIn Profile URL</span>
+                            <input type="text" placeholder="Enter your LinkedIn Profile URL" name="linkedinProfURL" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Designation</span>
+                            <input type="text" placeholder="Enter your designation" name="designation" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="text" placeholder="Enter your email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <span class="details">Password</span>
+                            <input type="password" placeholder="Enter your password" name="password" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Age</span>
+                            <input type="text" placeholder="Enter your age" name="age" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Do you have any Disability?</span>
+                            <div class="radio-options">
+                                <label>
+                                    <input type="radio" name="disabled" value="Yes" required> Yes
+                                </label>
+                                <label>
+                                    <input type="radio" name="disabled" value="No" required> No
+                                </label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="input-group">
+                        <div class="input-box">
+                            <span class="details">Profile Description</span>
+                            <input type="text" placeholder="Enter your profile description" name="profileDescription" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Username</span>
+                            <input type="text" placeholder="Enter your username" name="username" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Gender</span>
+                            <input type="text" placeholder="Male | Female" name="gender" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="gender-details">
+                </div>
+                <div class="profile-actions">
+                    <div class="button">
+                        <input class="register-button" type="submit" value="Register">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="title"><span>Login</span></div>
+      <form method="POST" action="{{ url_for('views.login') }}">
+        <div class="row">
+          <div class="row">
+            <div class="icon"><i class="fas fa-user"></i></div>
+            <input type="text" name="email" placeholder="Email or Phone" required>
+          </div>
+          <div class="row">
+            <div class="icon"><i class="fas fa-lock"></i></div>
+            <input type="password" name="password" id="passwordField" placeholder="Password" required>
+            <div class="show-password-icon">
+              <i class="fas fa-eye" id="togglePassword"></i>
+            </div>
+          </div>
+          
+        <div class="pass"><a href="{{ url_for('views.passreset') }}">Forgot password?</a></div>
+        <div class="row button">
+          <input type="submit" value="Login">
+        </div>
+        <div class="reg-link">Not a member? <a href="{{ url_for('views.reg') }}">Signup now</a></div>
+      </form>
+        <script>
+          alert('No records found. Please check your email and password.');
+          const togglePassword = document.getElementById('togglePassword');
+          const passwordField = document.getElementById('passwordField');
+
+          togglePassword.addEventListener('click', function () {
+            const fieldType = passwordField.getAttribute('type');
+            if (fieldType === 'password') {
+              passwordField.setAttribute('type', 'text');
+              togglePassword.classList.remove('fa-eye');
+              togglePassword.classList.add('fa-eye-slash');
+            } else {
+              passwordField.setAttribute('type', 'password');
+              togglePassword.classList.remove('fa-eye-slash');
+              togglePassword.classList.add('fa-eye');
+            }
+          });
+
+        </script>
+    </div>
+  </div>
+</body>
+
+</html>

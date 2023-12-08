@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Reset</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='passreset.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="title"><span>Password Reset</span></div>
+      <form action="{{ url_for('views.passreset') }}" method="POST">
+        <div class="row">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="row">
+          <div class="icon"><i class="fas fa-key"></i></div>
+          <input type="password" name="new_password" placeholder="New Password" required>
+        </div>
+        <div class="row">
+          <div class="icon"><i class="fas fa-key"></i></div>
+          <input type="password" name="confirm_password" placeholder="Confirm New Password" required>
+        </div>
+        <div class="row button">
+          <input type="submit" value="Reset Password">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

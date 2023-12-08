@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    <title>About Page</title>
+</head>
+<body>
+
+    <h1>About Page</h1>
+    <p><b>Data Source:</b> In this project, we generated 200 records randomly using various packages in Python.</p>
+    <p><b>Definition of Each Variable:</b> Below Table shows the definition of each variable.</p>
+    
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Data</th>
+                <th>Values</th>
+            </tr>
+            <tr>
+                <td>primaryKey</td>
+                <td>Unique identifier for each record.</td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td>Full name of the individual.</td>
+            </tr>
+            <tr>
+                <td>age</td>
+                <td>Age of the individual.</td>
+            </tr>
+            <tr>
+                <td>gender</td>
+                <td>Gender of the individual.</td>
+            </tr>
+            <tr>
+                <td>linkedinProfURL</td>
+                <td>LinkedIn profile URL of the individual.</td>
+            </tr>
+            <tr>
+                <td>designation</td>
+                <td>Job title or designation of the individual.</td>
+            </tr>
+            <tr>
+                <td>country</td>
+                <td>Country of residence of the individual.</td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>Boolean indicating whether the individual has a disability.</td>
+            </tr>
+            <tr>
+                <td>FreshExp</td>
+                <td>Freshness of experience in the field.</td>
+            </tr>
+            <tr>
+                <td>joinedDate</td>
+                <td>Date when the individual joined the organization.</td>
+            </tr>
+            <tr>
+                <td>profileDescription</td>
+                <td>Brief description of the individual's professional profile.</td>
+            </tr>
+            <tr>
+                <td>username</td>
+                <td>Username used by the individual.</td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td>Email address of the individual.</td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>Password associated with the individual's account.</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <p><b>1. <a href="{{ url_for('views.login') }}">Login:</a></b> We can Login with the right credentials on this page.</p>
+        <p><b>2. <a href="{{ url_for('views.reg') }}">Registration:</a></b> We can register after filling our details on this page.</p>
+        <p><b>3. <a href="{{ url_for('views.profile') }}">Profile:</a></b> After login with the right credentials, we can view our details on this page.</p>
+        <p><b>4. <a href="{{ url_for('views.passreset') }}">Password Reset:</a></b> We reset our password if forgot on this page.</p>
+        <p><b>NOTE:</b> In order to check the project/website properly, Please start with Login Page and not any other. From Login
+            Page you can access other pages accordingly.</p>
+    </div>
+
+</body>
+</html>

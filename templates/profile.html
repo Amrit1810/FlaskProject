@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+    <title>User Profile</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#logout').click(function () {
+                $.ajax({
+                    type: 'POST',
+                    url: '{{ url_for("views.logout") }}',
+                    success: function (response) {
+                        window.location.href = '{{ url_for("views.login") }}';
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="profile-container">
+        <div class="card-header">
+            <h1>User Profile</h1>
+        </div>
+        <div class="profile-details">
+
+            <div class="profile-field">
+                <label for="email">Email:</label>
+                <p id="email">{{ user.email }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="fullName">Full Name:</label>
+                <p id="fullName">{{ user.name }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="username">Username:</label>
+                <p id="username">{{ user.username }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="age">Age:</label>
+                <p id="age">{{ user.age }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="gender">Gender:</label>
+                <p id="gender">{{ user.gender }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="profileDescription">Profile Description:</label>
+                <p id="profileDescription">{{ user.profileDescription }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="linkedin">LinkedIn Profile URL:</label>
+                <p id="linkedin">{{ user.linkedinProfURL }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="designation">Designation:</label>
+                <p id="designation">{{ user.designation }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="country">Country:</label>
+                <p id="country">{{ user.country }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="disabled">Disabled:</label>
+                <p id="disabled">{{ user.disabled }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="experience">Fresher/Experienced:</label>
+                <p id="experience">{{ user.FreshExp }}</p>
+            </div>
+
+            <div class="profile-field">
+                <label for="joinedDate">Joined Date:</label>
+                <p id="joinedDate">{{ user.joinedDate }}</p>
+            </div>
+        </div>
+
+        <div class="profile-actions">
+            <button id="logout">Log Out</button>
+        </div>
+    </div>
+</body>
+
+</html>
