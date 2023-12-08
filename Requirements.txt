@@ -1,0 +1,6 @@
+flask
+Flask-Session
+pandas
+numpy
+pycountry
+faker
