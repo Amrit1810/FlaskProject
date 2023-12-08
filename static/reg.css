@@ -1,0 +1,149 @@
+body {
+  background: linear-gradient(135deg, #7fb3d5, #a9cce3, #d6eaf8); 
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding-top: 60px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.title {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  text-align: center;
+  font-size: 24px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.content {
+  padding: 20px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
+.input-box span.details {
+  font-weight: bold;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-box input[type="text"],
+.input-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-box input[type="submit"] {
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input-box input[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.profile-actions {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px
+}
+
+.register-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.register-button:hover {
+  background-color: #2980b9;
+}
+
+form{
+  padding: 30px;
+}
+
+.radio-options {
+  display: flex;
+  align-items: center;
+  margin-top: 14px
+}
+
+.radio-options label {
+  margin-right: 20px;
+}
+
+.radio-options input[type="radio"] {
+  margin-right: 5px;
+  transform: scale(1.2);
+}
+
+.radio-options label,
+.radio-options input[type="radio"] {
+  vertical-align: middle;
+}
+
+.input-box select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  color: #555;
+}
+
+.input-box select option[disabled]:first-child {
+  color: #ccc;
+}

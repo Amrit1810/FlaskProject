@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #7fb3d5, #a9cce3, #d6eaf8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  padding: 40px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .title {
+  height: 60px;
+  background: #3498db;
+  border-radius: 8px 8px 0 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper form {
+  padding: 30px 25px;
+}
+
+.wrapper form .row {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.wrapper form .row .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #777;
+}
+
+.wrapper form .row input {
+  padding-left: 30px;
+  height: 40px;
+  width: 100%;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.wrapper form .row input:focus {
+  border-color: #3498db;
+}
+
+form .row input::placeholder {
+  color: #999;
+}
+
+.wrapper form .row .show-password-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.wrapper form .row .show-password-icon i {
+  color: #777;
+}
+
+.wrapper form .button input {
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  background: #3498db;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form .button input:hover {
+  background: #217dbb;
+}
+
+.wrapper form .pass a {
+  color: #3498db;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.wrapper form .pass a:hover {
+  text-decoration: underline;
+}
